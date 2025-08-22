@@ -16,8 +16,8 @@ while True:
         contents = f.readlines()
         f.close()
 
-        number = int(contents[0].strip().split(':')[-1])
-        txt = f"num:{number+1}\n"
+        number = int(contents[0].strip().split('=')[-1])
+        txt = f"num={number+1}\n"
         for ind in range(len(contents)):
             if ind: txt+=contents[ind]
             
@@ -27,4 +27,4 @@ while True:
         driver.quit()
         break
         
-    time.sleep(3)
+    time.sleep(10)
